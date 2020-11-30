@@ -45,7 +45,7 @@ This year I took `Java` and tried to solve the tasks using this language.
 | [Day 22](https://github.com/mschoeffel/Advent-of-Code-2020/tree/master/Day22) | :clock10: | :clock10: |
 | [Day 23](https://github.com/mschoeffel/Advent-of-Code-2020/tree/master/Day23) | :clock10: | :clock10: |
 | [Day 24](https://github.com/mschoeffel/Advent-of-Code-2020/tree/master/Day24) | :clock10: | :clock10: |
-| [Day 25](https://github.com/mschoeffel/Advent-of-Code-2020/tree/master/Day25) | :clock10: | :clock10: 20
+| [Day 25](https://github.com/mschoeffel/Advent-of-Code-2020/tree/master/Day25) | :clock10: | :clock10: |
 ## Credits
 All credits of the tasks and questions go to `Eric Wastl` (Twitter: `@ericwastl`)\
 See his Website: [Advent of Code](https://adventofcode.com/) for further information.
