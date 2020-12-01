@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import java.io.IOException;
 import java.util.List;
 
-public class Day01Day01AppTest {
+public class Day01AppTest {
 
     @Test
     public void testDay01Part1() throws IOException {
