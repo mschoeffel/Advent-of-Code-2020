@@ -21,7 +21,7 @@ This year I took `Java` and tried to solve the tasks using this language.
 ## Score
 | Day | Part one | Part two |
 |----|----|----|
-| [Day 01](https://github.com/mschoeffel/Advent-of-Code-2020/tree/master/Day01) | :clock10: | :clock10: |
+| [Day 01](https://github.com/mschoeffel/Advent-of-Code-2020/tree/main/src/main/java/de/mschoeffel/Day01) | :star: | :star: |
 | [Day 02](https://github.com/mschoeffel/Advent-of-Code-2020/tree/master/Day02) | :clock10: | :clock10: |
 | [Day 03](https://github.com/mschoeffel/Advent-of-Code-2020/tree/master/Day03) | :clock10: | :clock10: |
 | [Day 04](https://github.com/mschoeffel/Advent-of-Code-2020/tree/master/Day04) | :clock10: | :clock10: |
@@ -47,11 +47,11 @@ This year I took `Java` and tried to solve the tasks using this language.
 | [Day 24](https://github.com/mschoeffel/Advent-of-Code-2020/tree/master/Day24) | :clock10: | :clock10: |
 | [Day 25](https://github.com/mschoeffel/Advent-of-Code-2020/tree/master/Day25) | :clock10: | :clock10: |
 ## Credits
-All credits of the tasks and questions go to `Eric Wastl` (Twitter: `@ericwastl`)\
+All credits of the tasks and questions and a huge thanks go to `Eric Wastl` (Twitter: `@ericwastl`)\
 See his Website: [Advent of Code](https://adventofcode.com/) for further information.
 
 ## Structure
-Every day a new directory with an `App` file inside gets created. 
+Every day a new directory with an `Day[NUMBER]App` file inside gets created. 
 This file contains the solutions to both tasks of the day in separate functions. 
 The `main` function would run both tasks of this day and print out the solutions.
 If data is given by the task it will also be stored inside of this directory.

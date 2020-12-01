@@ -9,7 +9,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class App {
+public class Day01App {
 
     public static int day01Part1(List<String> inputs) {
         Set<Tuple<Integer, Integer>> numberAndSearchTuples = new HashSet<>();
@@ -21,9 +21,9 @@ public class App {
         });
         for (Tuple<Integer, Integer> tuple : numberAndSearchTuples) {
             if (numberPool.contains(tuple.getSecond())) {
-                System.out.printf("Pair found: {%s ; %s}\n", tuple.getFirst(), tuple.getSecond());
+                System.out.printf("[Day 01 Part 1] Pair found: {%s ; %s}\n", tuple.getFirst(), tuple.getSecond());
                 int multiplication = tuple.getFirst() * tuple.getSecond();
-                System.out.printf("Multiplication: %s\n", multiplication);
+                System.out.printf("[Day 01 Part 1] Multiplication result: %s\n", multiplication);
                 return multiplication;
             }
         }
@@ -35,13 +35,12 @@ public class App {
         inputs.forEach(line -> numberPool.add(Integer.parseInt(line)));
         List<Integer> resultNumbers = new ArrayList<>();
         if (findNumber(2020, 2, numberPool, resultNumbers)) {
-            System.out.printf("Triple found: {%s, %s, %s}\n", resultNumbers.get(0), resultNumbers.get(1), resultNumbers.get(2));
+            System.out.printf("[Day 01 Part 2] Triple found: {%s, %s, %s}\n", resultNumbers.get(0), resultNumbers.get(1), resultNumbers.get(2));
             Integer multiplication = 1;
             for (Integer nextResultNumber : resultNumbers) {
                 multiplication *= nextResultNumber;
-
             }
-            System.out.printf("Multiplication: %s\n", multiplication);
+            System.out.printf("[Day 01 Part 2] Multiplication result: %s\n", multiplication);
             return multiplication;
         }
         return 0;
@@ -69,10 +68,11 @@ public class App {
         String inputPath = "Day01/input.txt";
         try {
             List<String> inputs = Utils.readFileLineByLine(inputPath);
-            System.out.printf("[Result] Day 01 Part 1: %s\n", day01Part1(inputs));
-            System.out.printf("[Result] Day 01 Part 2: %s\n", day01Part2(inputs));
+            System.out.printf("[Day 01 Part 1] [Result]: %s\n", day01Part1(inputs));
+            System.out.println();
+            System.out.printf("[Day 01 Part 2] [Result]: %s\n", day01Part2(inputs));
         } catch (IOException e) {
-            System.out.println("ERROR: " + e);
+            System.out.println("[Day 01] [Error]: Error reading input.txt: " + e);
         }
     }
 

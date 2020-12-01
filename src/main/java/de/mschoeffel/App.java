@@ -1,15 +1,12 @@
 package de.mschoeffel;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import de.mschoeffel.Day01.Day01App;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class App {
-
-    private static final Logger logger = LogManager.getLogger(App.class);
 
     public static void main(String[] args) {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -20,10 +17,15 @@ public class App {
         } catch (NumberFormatException | IOException e) {
             System.err.println("Invalid Format/Input!");
         }
-        if (number > 0) {
+        if (number >= 0) {
             switch (number) {
+                case 0:
+                    System.out.println();
+                    Day01App.main(args);
+                    break;
                 case 1:
-                    //TODO
+                    System.out.println();
+                    Day01App.main(args);
                     break;
                 default:
                     System.out.println("Invalid number or day not solved yet.");
