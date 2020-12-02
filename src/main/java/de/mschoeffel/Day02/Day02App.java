@@ -4,6 +4,8 @@ import de.mschoeffel.Utils.Utils;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Day02App {
 
@@ -11,17 +13,23 @@ public class Day02App {
         int correctPasswords = 0;
 
         for (String inputLine : inputLines) {
-            int min = Integer.parseInt(inputLine.substring(0, inputLine.indexOf('-')));
-            int max = Integer.parseInt(inputLine.substring(inputLine.indexOf('-') + 1, inputLine.indexOf(' ')));
-            char c = inputLine.substring(inputLine.indexOf(' ') + 1, inputLine.indexOf(':')).charAt(0);
-            String password = inputLine.substring(inputLine.indexOf(':') + 2);
+            Matcher minMatcher = Pattern.compile("^\\d*").matcher(inputLine);
+            Matcher maxMatcher = Pattern.compile("(?<=-)\\d*").matcher(inputLine);
+            Matcher charMatcher = Pattern.compile("(?<=\\s)\\w(?=:)").matcher(inputLine);
+            Matcher passwordMatcher = Pattern.compile("\\w*$").matcher(inputLine);
 
-            if (isPasswordOccurrCorrect(min, max, c, password)) {
-                System.out.printf("[Day 02 Part 1] Valid Password Found: Occurr[%s-%s] Char[%s] %s\n", min, max, c, password);
-                correctPasswords++;
+            if (minMatcher.find() && maxMatcher.find() && charMatcher.find() && passwordMatcher.find()) {
+                int min = Integer.parseInt(minMatcher.group());
+                int max = Integer.parseInt(maxMatcher.group());
+                char c = charMatcher.group().charAt(0);
+                String password = passwordMatcher.group();
+
+                if (isPasswordOccurrCorrect(min, max, c, password)) {
+                    System.out.printf("[Day 02 Part 1] Valid Password Found: Occurr[%s-%s] Char[%s] %s\n", min, max, c, password);
+                    correctPasswords++;
+                }
             }
         }
-
         return correctPasswords;
     }
 
@@ -41,18 +49,24 @@ public class Day02App {
     public static int day02Part2(List<String> inputLines) {
         int correctPasswords = 0;
 
-        for (String input : inputLines) {
-            int posOne = Integer.parseInt(input.substring(0, input.indexOf('-')));
-            int posTwo = Integer.parseInt(input.substring(input.indexOf('-') + 1, input.indexOf(' ')));
-            char c = input.substring(input.indexOf(' ') + 1, input.indexOf(':')).charAt(0);
-            String password = input.substring(input.indexOf(':') + 2);
+        for (String inputLine : inputLines) {
+            Matcher posOneMatcher = Pattern.compile("^\\d*").matcher(inputLine);
+            Matcher posTwoMatcher = Pattern.compile("(?<=-)\\d*").matcher(inputLine);
+            Matcher charMatcher = Pattern.compile("(?<=\\s)\\w(?=:)").matcher(inputLine);
+            Matcher passwordMatcher = Pattern.compile("\\w*$").matcher(inputLine);
 
-            if (isPasswordPosCorrect(posOne, posTwo, c, password)) {
-                System.out.printf("[Day 02 Part 2] Valid Password Found: Pos[%s, %s] Char[%s] %s\n", posOne, posTwo, c, password);
-                correctPasswords++;
+            if (posOneMatcher.find() && posTwoMatcher.find() && charMatcher.find() && passwordMatcher.find()) {
+                int posOne = Integer.parseInt(posOneMatcher.group());
+                int posTwo = Integer.parseInt(posTwoMatcher.group());
+                char c = charMatcher.group().charAt(0);
+                String password = passwordMatcher.group();
+
+                if (isPasswordPosCorrect(posOne, posTwo, c, password)) {
+                    System.out.printf("[Day 02 Part 2] Valid Password Found: Pos[%s, %s] Char[%s] %s\n", posOne, posTwo, c, password);
+                    correctPasswords++;
+                }
             }
         }
-
         return correctPasswords;
     }
 
