@@ -19,12 +19,8 @@ public class Day03App {
 
         for (int i = down; i < inputLines.size(); i += down) {
             String inputLine = inputLines.get(i);
-            xPos += right;
-            if (xPos >= inputLine.length()) {
-                xPos -= inputLine.length();
-            }
-            char c = inputLine.charAt(xPos);
-            if (c == '#') {
+            xPos = (xPos + right) % inputLine.length();
+            if (inputLine.charAt(xPos) == '#') {
                 trees++;
             }
         }
