@@ -24,7 +24,7 @@ This year I took `Java` and tried to solve the tasks using this language.
 | [Day 01](https://github.com/mschoeffel/Advent-of-Code-2020/tree/main/src/main/java/de/mschoeffel/Day01) | :star: | :star: |
 | [Day 02](https://github.com/mschoeffel/Advent-of-Code-2020/tree/main/src/main/java/de/mschoeffel/Day02) | :star: | :star: |
 | [Day 03](https://github.com/mschoeffel/Advent-of-Code-2020/tree/main/src/main/java/de/mschoeffel/Day03) | :star: | :star: |
-| [Day 04](https://github.com/mschoeffel/Advent-of-Code-2020/tree/master/Day04) | :clock10: | :clock10: |
+| [Day 04](https://github.com/mschoeffel/Advent-of-Code-2020/tree/main/src/main/java/de/mschoeffel/Day04) | :star: | :star: |
 | [Day 05](https://github.com/mschoeffel/Advent-of-Code-2020/tree/master/Day05) | :clock10: | :clock10: |
 | [Day 06](https://github.com/mschoeffel/Advent-of-Code-2020/tree/master/Day06) | :clock10: | :clock10: |
 | [Day 07](https://github.com/mschoeffel/Advent-of-Code-2020/tree/master/Day07) | :clock10: | :clock10: |
