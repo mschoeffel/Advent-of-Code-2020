@@ -25,7 +25,7 @@ public class Day02App {
                 String password = passwordMatcher.group();
 
                 if (isPasswordOccurrCorrect(min, max, c, password)) {
-                    System.out.printf("[Day 02 Part 1] Valid Password Found: Occurr[%s-%s] Char[%s] %s\n", min, max, c, password);
+                    System.out.printf("[Day 02 Part 1] Valid Password found: Occurr[%s-%s] Char[%s] %s\n", min, max, c, password);
                     correctPasswords++;
                 }
             }
@@ -62,7 +62,7 @@ public class Day02App {
                 String password = passwordMatcher.group();
 
                 if (isPasswordPosCorrect(posOne, posTwo, c, password)) {
-                    System.out.printf("[Day 02 Part 2] Valid Password Found: Pos[%s, %s] Char[%s] %s\n", posOne, posTwo, c, password);
+                    System.out.printf("[Day 02 Part 2] Valid Password found: Pos[%s, %s] Char[%s] %s\n", posOne, posTwo, c, password);
                     correctPasswords++;
                 }
             }

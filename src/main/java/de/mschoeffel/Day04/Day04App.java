@@ -23,7 +23,7 @@ public class Day04App {
 
             if (byrMatcher.find() && iyrMatcher.find() && eyrMatcher.find() && hgtMatcher.find() && hclMatcher.find() && eclMatcher.find() && pidMatcher.find()) {
                 correctPassports++;
-                System.out.printf("[Day 04 Part 1] Valid Passport Found: %s\n", inputLine);
+                System.out.printf("[Day 04 Part 1] Valid Passport found: %s\n", inputLine);
             }
         }
         return correctPassports;
@@ -43,7 +43,7 @@ public class Day04App {
 
             if (byrMatcher.find() && iyrMatcher.find() && eyrMatcher.find() && hgtMatcher.find() && hclMatcher.find() && eclMatcher.find() && pidMatcher.find()) {
                 correctPassports++;
-                System.out.printf("[Day 04 Part 2] Valid Passport Found: %s\n", inputLine);
+                System.out.printf("[Day 04 Part 2] Valid Passport found: %s\n", inputLine);
             }
         }
         return correctPassports;
