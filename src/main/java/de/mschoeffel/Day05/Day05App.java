@@ -10,95 +10,64 @@ import java.util.List;
 public class Day05App {
 
     public static int day05Part1(List<String> inputLines) {
-        int highesSeatId = 0;
+        int highestSeatId = 0;
         for (String inputLine : inputLines) {
-            int rowMin = 0;
-            int rowMax = 127;
-            int columnMin = 0;
-            int columnMax = 7;
-
-            for (int i = 0; i < 7; i++) {
-                char c = inputLine.charAt(i);
-                switch (c) {
-                    case 'B':
-                        rowMin = (Math.round((rowMax - rowMin) / 2f) + rowMin);
-                        break;
-                    case 'F':
-                        rowMax = (rowMax - Math.round((rowMax - rowMin) / 2f));
-                        break;
-                }
-            }
-            if (rowMin == rowMax) {
-                System.out.printf("[Day 05 Part 1] Row of Ticket: %s found: %s\n", inputLine, rowMin);
-            }
-            for (int i = 7; i < 10; i++) {
-                char c = inputLine.charAt(i);
-                switch (c) {
-                    case 'L':
-                        columnMax = columnMax - Math.round((columnMax - columnMin) / 2f);
-                        break;
-                    case 'R':
-                        columnMin = Math.round((columnMax - columnMin) / 2f) + columnMin;
-                        break;
-                }
-            }
-            if (columnMin == columnMax) {
-                System.out.printf("[Day 05 Part 1] Column of Ticket: %s found: %s\n", inputLine, columnMin);
-            }
-            if (rowMin == rowMax && columnMin == columnMax) {
-                int tempHighestSeatId = rowMin * 8 + columnMin;
-                System.out.printf("[Day 05 Part 1] Seat ID of Ticket: %s calculated: %s\n", inputLine, tempHighestSeatId);
-                if (tempHighestSeatId > highesSeatId) {
-                    System.out.printf("[Day 05 Part 1] Seat ID of Ticket: %s was higher than current: Old: %s New: %s\n", inputLine, highesSeatId, tempHighestSeatId);
-                    highesSeatId = tempHighestSeatId;
-                }
+            int tempHighestSeatId = calculateIdOfTicket(inputLine);
+            if (tempHighestSeatId > highestSeatId) {
+                System.out.printf("[Day 05 Part 1] Seat ID of Ticket: %s was higher than current: Old: %s New: %s\n", inputLine, highestSeatId, tempHighestSeatId);
+                highestSeatId = tempHighestSeatId;
             }
         }
-        return highesSeatId;
+        return highestSeatId;
+    }
+
+    private static int calculateIdOfTicket(String ticket) {
+        int id = 0;
+        int rowMin = 0;
+        int rowMax = 127;
+        int columnMin = 0;
+        int columnMax = 7;
+
+        for (int i = 0; i < 7; i++) {
+            char c = ticket.charAt(i);
+            switch (c) {
+                case 'B':
+                    rowMin = (Math.round((rowMax - rowMin) / 2f) + rowMin);
+                    break;
+                case 'F':
+                    rowMax = (rowMax - Math.round((rowMax - rowMin) / 2f));
+                    break;
+            }
+        }
+        if (rowMin == rowMax) {
+            System.out.printf("[Day 05 Part 1 OR 2] Row of Ticket: %s found: %s\n", ticket, rowMin);
+        }
+        for (int i = 7; i < 10; i++) {
+            char c = ticket.charAt(i);
+            switch (c) {
+                case 'L':
+                    columnMax = columnMax - Math.round((columnMax - columnMin) / 2f);
+                    break;
+                case 'R':
+                    columnMin = Math.round((columnMax - columnMin) / 2f) + columnMin;
+                    break;
+            }
+        }
+        if (columnMin == columnMax) {
+            System.out.printf("[Day 05 Part 1 OR 2] Column of Ticket: %s found: %s\n", ticket, columnMin);
+        }
+        if (rowMin == rowMax && columnMin == columnMax) {
+            System.out.printf("[Day 05 Part 1 OR 2] Seat ID of Ticket: %s calculated: %s\n", ticket, id);
+            id = rowMin * 8 + columnMin;
+        }
+        return id;
     }
 
     public static int day05Part2(List<String> inputLines) {
         int emptySeatId = 0;
         List<Integer> occupiedSeats = new ArrayList<>();
         for (String inputLine : inputLines) {
-            int rowMin = 0;
-            int rowMax = 127;
-            int columnMin = 0;
-            int columnMax = 7;
-
-            for (int i = 0; i < 7; i++) {
-                char c = inputLine.charAt(i);
-                switch (c) {
-                    case 'B':
-                        rowMin = (Math.round((rowMax - rowMin) / 2f) + rowMin);
-                        break;
-                    case 'F':
-                        rowMax = (rowMax - Math.round((rowMax - rowMin) / 2f));
-                        break;
-                }
-            }
-            if (rowMin == rowMax) {
-                System.out.printf("[Day 05 Part 2] Row of Ticket: %s found: %s\n", inputLine, rowMin);
-            }
-            for (int i = 7; i < 10; i++) {
-                char c = inputLine.charAt(i);
-                switch (c) {
-                    case 'L':
-                        columnMax = columnMax - Math.round((columnMax - columnMin) / 2f);
-                        break;
-                    case 'R':
-                        columnMin = Math.round((columnMax - columnMin) / 2f) + columnMin;
-                        break;
-                }
-            }
-            if (columnMin == columnMax) {
-                System.out.printf("[Day 05 Part 2] Column of Ticket: %s found: %s\n", inputLine, columnMin);
-            }
-            if (rowMin == rowMax && columnMin == columnMax) {
-                int tempHighestSeatId = rowMin * 8 + columnMin;
-                System.out.printf("[Day 05 Part 2] Seat ID of Ticket: %s calculated: %s\n", inputLine, tempHighestSeatId);
-                occupiedSeats.add(tempHighestSeatId);
-            }
+            occupiedSeats.add(calculateIdOfTicket(inputLine));
         }
 
         Collections.sort(occupiedSeats);
