@@ -39,9 +39,6 @@ public class Day05App {
                     break;
             }
         }
-        if (rowMin == rowMax) {
-            System.out.printf("[Day 05 Part 1 OR 2] Row of Ticket: %s found: %s\n", ticket, rowMin);
-        }
         for (int i = 7; i < 10; i++) {
             char c = ticket.charAt(i);
             switch (c) {
@@ -53,12 +50,9 @@ public class Day05App {
                     break;
             }
         }
-        if (columnMin == columnMax) {
-            System.out.printf("[Day 05 Part 1 OR 2] Column of Ticket: %s found: %s\n", ticket, columnMin);
-        }
         if (rowMin == rowMax && columnMin == columnMax) {
-            System.out.printf("[Day 05 Part 1 OR 2] Seat ID of Ticket: %s calculated: %s\n", ticket, id);
             id = rowMin * 8 + columnMin;
+            System.out.printf("[Day 05 Part 1 OR 2] Seat ID of Ticket: %s calculated: %s Row: %s Column: %s\n", ticket, id, rowMin, columnMin);
         }
         return id;
     }
