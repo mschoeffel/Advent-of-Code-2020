@@ -28,24 +28,24 @@ This year I took `Java` and tried to solve the tasks using this language.
 | [Day 05](https://github.com/mschoeffel/Advent-of-Code-2020/tree/main/src/main/java/de/mschoeffel/Day05) | :star: | :star: |
 | [Day 06](https://github.com/mschoeffel/Advent-of-Code-2020/tree/main/src/main/java/de/mschoeffel/Day06) | :star: | :star: |
 | [Day 07](https://github.com/mschoeffel/Advent-of-Code-2020/tree/main/src/main/java/de/mschoeffel/Day07) | :star: | :star: |
-| [Day 08](https://github.com/mschoeffel/Advent-of-Code-2020/tree/master/Day08) | :clock10: | :clock10: |
-| [Day 09](https://github.com/mschoeffel/Advent-of-Code-2020/tree/master/Day09) | :clock10: | :clock10: |
-| [Day 10](https://github.com/mschoeffel/Advent-of-Code-2020/tree/master/Day10) | :clock10: | :clock10: |
-| [Day 11](https://github.com/mschoeffel/Advent-of-Code-2020/tree/master/Day11) | :clock10: | :clock10: |
-| [Day 12](https://github.com/mschoeffel/Advent-of-Code-2020/tree/master/Day12) | :clock10: | :clock10: |
-| [Day 13](https://github.com/mschoeffel/Advent-of-Code-2020/tree/master/Day13) | :clock10: | :clock10: |
-| [Day 14](https://github.com/mschoeffel/Advent-of-Code-2020/tree/master/Day14) | :clock10: | :clock10: |
-| [Day 15](https://github.com/mschoeffel/Advent-of-Code-2020/tree/master/Day15) | :clock10: | :clock10: |
-| [Day 16](https://github.com/mschoeffel/Advent-of-Code-2020/tree/master/Day16) | :clock10: | :clock10: |
-| [Day 17](https://github.com/mschoeffel/Advent-of-Code-2020/tree/master/Day17) | :clock10: | :clock10: |
-| [Day 18](https://github.com/mschoeffel/Advent-of-Code-2020/tree/master/Day18) | :clock10: | :clock10: |
-| [Day 19](https://github.com/mschoeffel/Advent-of-Code-2020/tree/master/Day19) | :clock10: | :clock10: |
-| [Day 20](https://github.com/mschoeffel/Advent-of-Code-2020/tree/master/Day20) | :clock10: | :clock10: |
-| [Day 21](https://github.com/mschoeffel/Advent-of-Code-2020/tree/master/Day21) | :clock10: | :clock10: |
-| [Day 22](https://github.com/mschoeffel/Advent-of-Code-2020/tree/master/Day22) | :clock10: | :clock10: |
-| [Day 23](https://github.com/mschoeffel/Advent-of-Code-2020/tree/master/Day23) | :clock10: | :clock10: |
-| [Day 24](https://github.com/mschoeffel/Advent-of-Code-2020/tree/master/Day24) | :clock10: | :clock10: |
-| [Day 25](https://github.com/mschoeffel/Advent-of-Code-2020/tree/master/Day25) | :clock10: | :clock10: |
+| [Day 08](https://github.com/mschoeffel/Advent-of-Code-2020/tree/main/src/main/java/de/mschoeffel/Day08) | :star: | :star: |
+| [Day 09]() | :clock10: | :clock10: |
+| [Day 10]() | :clock10: | :clock10: |
+| [Day 11]() | :clock10: | :clock10: |
+| [Day 12]() | :clock10: | :clock10: |
+| [Day 13]() | :clock10: | :clock10: |
+| [Day 14]() | :clock10: | :clock10: |
+| [Day 15]() | :clock10: | :clock10: |
+| [Day 16]() | :clock10: | :clock10: |
+| [Day 17]() | :clock10: | :clock10: |
+| [Day 18]() | :clock10: | :clock10: |
+| [Day 19]() | :clock10: | :clock10: |
+| [Day 20]() | :clock10: | :clock10: |
+| [Day 21]() | :clock10: | :clock10: |
+| [Day 22]() | :clock10: | :clock10: |
+| [Day 23]() | :clock10: | :clock10: |
+| [Day 24]() | :clock10: | :clock10: |
+| [Day 25]() | :clock10: | :clock10: |
 ## Credits
 All credits of the tasks and questions and a huge thanks go to `Eric Wastl` (Twitter: `@ericwastl`)\
 See his Website: [Advent of Code](https://adventofcode.com/) for further information.
