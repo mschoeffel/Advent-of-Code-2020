@@ -9,6 +9,7 @@ import de.mschoeffel.Day06.Day06App;
 import de.mschoeffel.Day07.Day07App;
 import de.mschoeffel.Day08.Day08App;
 import de.mschoeffel.Day09.Day09App;
+import de.mschoeffel.Day10.Day10App;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -46,6 +47,8 @@ public class App {
                     Day08App.main(args);
                     System.out.println();
                     Day09App.main(args);
+                    System.out.println();
+                    Day10App.main(args);
                     break;
                 case 1:
                     Day01App.main(args);
@@ -73,6 +76,9 @@ public class App {
                     break;
                 case 9:
                     Day09App.main(args);
+                    break;
+                case 10:
+                    Day10App.main(args);
                     break;
                 default:
                     System.out.println("Invalid number or day not solved yet.");
